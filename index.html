@@ -7,18 +7,6 @@
         <link rel="stylesheet" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/slicknav.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#navMenu").slicknav({
-                prependTo: "#mobileMenu",
-                closeOnClose: true
-            });
-        });
-    </script>
     </head>
     <body>
         <header>
@@ -26,9 +14,8 @@
             <nav id="navMenu">
                 <ul>
                     <li id="title"><a href="index.html" id="titleA">"HASHBROWNS"</a></li>
-                    <li id=hashalg>
-                        <a href="#">
-                            Hashing Algorithms
+                    <li id=hashAlg>
+                        <a href="#">Hashing Algorithms
                             <i class="arrow down"></i>
                         </a>
                         <ul id=algMenu>
@@ -36,6 +23,7 @@
                             <li id="sha1"><a href="#">SHA-1</a></li>
                             <li id="sha2"><a href="#">SHA-2</a></li>
                             <li id="sha3"><a href="#">SHA-3</a></li>
+                            <li id="none">nothing</li>
                         </ul>
                     </li>
                     <li id="generate">
@@ -46,6 +34,7 @@
                             <li id="weak"><a href="#">Weak Password</a></li>
                             <li id="medium"><a href="#">Medium Password</a></li>
                             <li id="strong"><a href="#">Strong Password</a></li>
+                            <li id="none">nothing</li>
                         </ul>
                     </li>
                     <li id="hash"><a href="#">HASH!</a></li>

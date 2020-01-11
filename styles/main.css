@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 150%;
-    margin: 0 0 0 1em;
-    padding: .5em 0;
-}
-
 body {
     width: 100%;
 }
@@ -18,7 +10,7 @@ body {
 body header {
     font-family: 'Montserrat', sans-serif;
     background-color: darkkhaki;
-    padding-bottom: .5em;
+    padding: .5em 0;
 }
 
 i {
@@ -42,25 +34,26 @@ i {
 }
 
 #navMenu ul li {
+    display: block;
     float: left;
-    width: 20%;
+    width: 15%;
     text-align: center;
     text-decoration: none;
-    padding: .5em 0;
+    
 }
 
 #navMenu ul ul {
     display: none;
     position: absolute;
+    top: 100%;
     width: 100%;
 }
 
 #navMenu ul ul li {
     float: none;
-    padding: 0;
 }
 
-#navMenu ul li:hover > ul {
+#navMenu ul li:hover ul {
     display: block;
 }
 
@@ -75,107 +68,48 @@ i {
 }
 
 #navMenu ul li a {
-    text-decoration: none;
-    text-align: center;
-    padding: .5em 0;
     display: block;
+    text-decoration: none;
+    background-color: darkkhaki;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    padding: .5em 0;
 }
 
 #navMenu ul li a:hover {
     color: #6081FF;
 }
 
-#hash a:hover {
-    color: darkkhaki !important;
-}
-
-#hashalg, #generate, #hash {
-    margin-top: 1em;
-    padding-bottom: 0;
-    font-weight: bold;
-}
-
-#generate {
-    margin-top: .6em;
-}
-
-#hash {
-    border: solid 2px slategray;
-    border-radius: 50px;
-    margin-top: 1em;
-    margin-left: 5em;
-    font-weight: normal;
-    background-color: #6081FF;
-    max-width: 200px;
-}
-
-#md5 {
-    margin-top: .7em;
-    border-top: solid 1px gainsboro;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#sha3 {
-    border-bottom: solid 1px gainsboro;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: gainsboro;
-}
-
-#weak {
-    margin-top: .7em;
-    border-top: solid 1px gainsboro;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#strong {
-    border-bottom: solid 1px gainsboro;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-#md5, #sha1, #sha2, #sha3 {
-    background-color: darkkhaki;
-    font-weight: normal;
-}
-
-#weak, #medium, #strong {
-    background-color: darkkhaki;
-    font-weight: normal;
-}
-
-#title {
-    font-size: 150%;
-    font-weight: bolder;
-    margin-top: .3em;
-    margin-left: .5em;
-    color: black;
-}
-
 #question {
     width: 20px !important;
-    border: solid 2px white;
-    border-radius: 90px;
     float: right;
-    padding: 0 !important;
-    margin-top: 1.5em;
-    margin-right: 2em;
     font-weight: bold;
+    margin-right: 1em;
 }
 
 #mobileMenu {
     display: none;
 }
 
-@media only screen and (max-width: 959px) {
-    
+@media only screen and (max-width: 1636px) {
+    #title, #hashAlg, #hash, #question {
+        padding-top: .5em;
+    }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1180px) {
+    #hashAlg {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 1072px) {
+    #hashAlg {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 987px) {
     #navMenu {
         display: none;
     }

@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 0 0 0 1em;
+    padding: .5em 0;
+}
+
+body {
+    width: 100%;
+}
+
+body header {
+    font-family: 'Montserrat', sans-serif;
+    background-color: darkkhaki;
+    padding-bottom: .5em;
+}
+
+i {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#navMenu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    padding: .5em 0;
+}
+
+#navMenu ul ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+#navMenu ul ul li {
+    float: none;
+    padding: 0;
+}
+
+#navMenu ul li:hover > ul {
+    display: block;
+}
+
+#navMenu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#navMenu ul li:last-child {
+    float: right;
+}
+
+#navMenu ul li a {
+    text-decoration: none;
+    text-align: center;
+    padding: .5em 0;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#navMenu ul li a:hover {
+    color: #6081FF;
+}
+
+#hash a:hover {
+    color: darkkhaki !important;
+}
+
+#hashalg, #generate, #hash {
+    margin-top: 1em;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+#generate {
+    margin-top: .6em;
+}
+
+#hash {
+    border: solid 2px slategray;
+    border-radius: 50px;
+    margin-top: 1em;
+    margin-left: 5em;
+    font-weight: normal;
+    background-color: #6081FF;
+    max-width: 200px;
+}
+
+#md5 {
+    margin-top: .7em;
+    border-top: solid 1px gainsboro;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#sha3 {
+    border-bottom: solid 1px gainsboro;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: gainsboro;
+}
+
+#weak {
+    margin-top: .7em;
+    border-top: solid 1px gainsboro;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#strong {
+    border-bottom: solid 1px gainsboro;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#md5, #sha1, #sha2, #sha3 {
+    background-color: darkkhaki;
+    font-weight: normal;
+}
+
+#weak, #medium, #strong {
+    background-color: darkkhaki;
+    font-weight: normal;
+}
+
+#title {
+    font-size: 150%;
+    font-weight: bolder;
+    margin-top: .3em;
+    margin-left: .5em;
+    color: black;
+}
+
+#question {
+    width: 20px !important;
+    border: solid 2px white;
+    border-radius: 90px;
+    float: right;
+    padding: 0 !important;
+    margin-top: 1.5em;
+    margin-right: 2em;
+    font-weight: bold;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+@media only screen and (max-width: 959px) {
+    
+}
+
+@media only screen and (max-width: 767px) {
+    #navMenu {
+        display: none;
+    }
+    
+    #mobileMenu {
+        display: block;
+    }
+}

@@ -140,7 +140,11 @@ i {
         display: none;
     }
     
-    #titleA {
+    #title {
         display: none;
+    }
+    
+    #hAsh {
+        color: black !important;
     }
 }

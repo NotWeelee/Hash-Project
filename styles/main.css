@@ -7,7 +7,7 @@ body {
     width: 100%;
 }
 
-body header {
+body nav {
     font-family: 'Montserrat', sans-serif;
     background-color: darkkhaki;
     padding: .5em 0;
@@ -26,15 +26,14 @@ i {
     -webkit-transform: rotate(45deg);
 }
 
-#navMenu ul {
+#nav_menu ul {
     list-style: none;
     position: relative;
     margin: 0;
     padding: 0;
 }
 
-#navMenu ul li {
-    display: block;
+#nav_menu ul li {
     float: left;
     width: 15%;
     text-align: center;
@@ -42,32 +41,28 @@ i {
     
 }
 
-#navMenu ul ul {
+#nav_menu ul ul {
     display: none;
     position: absolute;
     top: 100%;
     width: 100%;
 }
 
-#navMenu ul ul li {
+#nav_menu ul ul li {
     float: none;
 }
 
-#navMenu ul li:hover ul {
+#nav_menu ul li:hover ul {
     display: block;
 }
 
-#navMenu > ul::after {
+#nav_menu > ul::after {
     content: "";
     display: block;
     clear: both;
 }
 
-#navMenu ul li:last-child {
-    float: right;
-}
-
-#navMenu ul li a {
+#nav_menu ul li a {
     display: block;
     text-decoration: none;
     background-color: darkkhaki;
@@ -76,15 +71,33 @@ i {
     padding: .5em 0;
 }
 
-#navMenu ul li a:hover {
+#nav_menu ul li a:hover {
     color: #6081FF;
 }
 
-#question {
-    width: 20px !important;
-    float: right;
+#titleA {
     font-weight: bold;
-    margin-right: 1em;
+    color: black !important;
+}
+
+#md5, #weak {
+    margin-top: .6em;
+    border-top: 1px solid darkkhaki;
+    border-radius: 3px;
+}
+
+#sha3, #strong {
+    border-bottom: 1px solid darkkhaki;
+    border-radius: 3px;
+}
+
+#hAsh {
+    color: #6081FF !important;
+    font-weight: bold;
+}
+
+#hAsh:hover {
+    color: black !important;
 }
 
 #mobileMenu {
@@ -110,11 +123,24 @@ i {
 }
 
 @media only screen and (max-width: 987px) {
-    #navMenu {
+    #nav_menu {
         display: none;
     }
     
     #mobileMenu {
         display: block;
+    }
+    
+    .slicknav_menu {
+        background-color: darkkhaki !important;
+        padding: 0 !important;
+    }
+    
+    i {
+        display: none;
+    }
+    
+    #titleA {
+        display: none;
     }
 }

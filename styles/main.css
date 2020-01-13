@@ -38,7 +38,7 @@ i {
 
 #titleA {
     text-decoration: none;
-    color: #6081FF;
+    color: black;
     font-weight: bolder;
 }
 
@@ -206,7 +206,27 @@ section {
         width: 70%;
     }
     
+    aside, section {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
     aside {
-        
+        margin-bottom: 3em;
+    }
+    
+    p {
+        padding: 2em;
+        margin: 0;
+    }
+    
+    .passP {
+        padding: 2em;
+        margin: 0;
+    }
+    
+    #hashPass {
+        margin-top: 3em;
     }
 }

@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/slicknav.css">
+        <link rel="stylesheet" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         
         <script
@@ -16,7 +16,7 @@
         <script src="js/jquery.slicknav.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('#nav_menu').slicknav({prependTo:'#mobileMenu', label:'HASHBROWNS'});
+                $('#nav_menu').slicknav({prependTo:'#mobileMenu', label:'"HASHBROWNS"'});
             });
         </script>
     </head>
@@ -27,12 +27,12 @@
         <nav id="mobileMenu"></nav>
         <nav id="nav_menu">
             <ul>
-                <li id="title"><a href="index.html" id="titleA">"HASHBROWNS"</a></li>
-                <li id=hashAlg>
+                <h1 id="title"><a id="titleA" href="index.html">"HASHBROWNS"</a></h1>
+                <li id="hashAlg">
                     <a href="#">Hashing Algorithms
                         <i class="arrow down"></i>
                     </a>
-                    <ul id=algMenu>
+                    <ul id="algMenu">
                         <li id="md5"><a href="#">MD-5</a></li>
                         <li id="sha1"><a href="#">SHA-1</a></li>
                         <li id="sha2"><a href="#">SHA-2</a></li>
@@ -49,14 +49,24 @@
                         <li id="strong"><a href="#">Strong Password</a></li>
                     </ul>
                 </li>
-                <li id="hash"><a id="hAsh" href="#">HASH!</a></li>
             </ul>
         </nav>
         
         <main>
-            <div id="content">
-                
-            </div>
+            <form>
+                <h1>Enter a Password!</h1>
+                <input type="text" name="password" id="password">
+                <h1 id="hash">HASH!</h1>
+            </form>
+            
+            <aside>
+                <p class="passP">This is the hashed password</p>
+                <p>This is how long a normal computer would take to obtain this hashed password</p>
+            </aside>
+            <section>
+                <p class="passP">This is the plain password</p>
+                <p>This is how long it would take for a brute force attack to obtain your password</p>
+            </section>
         </main>
         <footer>
         </footer>

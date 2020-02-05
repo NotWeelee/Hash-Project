@@ -13,6 +13,8 @@
           src="http://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossorigin="anonymous"></script>
+        <script src="js/updateButton.js"></script>
+        <script src="js/hash.js"></script>
         <script src="js/jquery.slicknav.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -33,10 +35,10 @@
                         <i class="arrow down"></i>
                     </a>
                     <ul id="algMenu">
-                        <li id="md5"><a href="#">MD-5</a></li>
-                        <li id="sha1"><a href="#">SHA-1</a></li>
-                        <li id="sha2"><a href="#">SHA-2</a></li>
-                        <li id="sha3"><a href="#">SHA-3</a></li>
+                        <li id="md5"><a href="#" onClick="updateButtonMD5()">MD-5</a></li>
+                        <li id="sha1"><a href="#" onClick="updateButtonSHA1()">SHA-1</a></li>
+                        <li id="sha2"><a href="#" onClick="updateButtonSHA2()">SHA-2</a></li>
+                        <li id="sha3"><a href="#" onClick="updateButtonSHA3()">SHA-3</a></li>
                     </ul>
                 </li>
                 <li id="generate">
@@ -53,19 +55,17 @@
         </nav>
         
         <main>
-            <form>
-                <h1>Enter a Password!</h1>
-                <input type="text" name="password" id="password">
-                <h1 id="hash">HASH!</h1>
-            </form>
+            <h1 id="enterPass">Enter a Password!</h1>
+            <input type="text" name="password" id="password">
+            <button type="button" id="hashButton">CHOOSE AN ALGORITHM!</button>
             
             <aside>
-                <p class="passP" id="hashPass">This is the hashed password</p>
-                <p>This is how long a normal computer would take to obtain this hashed password</p>
+                <p id="hashedPassword">This is the hashed password</p>
+                <p id="hashedPasswordAttack">This is how long a normal computer would take to obtain this hashed password</p>
             </aside>
             <section>
-                <p class="passP">This is the plain password</p>
-                <p id="brute">This is how long it would take for a brute force attack to obtain your password</p>
+                <p id="plainPassword">This is the plain password</p>
+                <p id="bruteForceAttack">This is how long it would take for a brute force attack to obtain your plain password</p>
             </section>
         </main>
         <footer>

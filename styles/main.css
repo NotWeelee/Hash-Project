@@ -4,11 +4,11 @@
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
 }
 
 body nav {
-    font-family: 'Montserrat', sans-serif;
     background-color: darkkhaki;
     padding: .5em 0;
 }
@@ -85,6 +85,7 @@ i {
     font-family: 'Montserrat', sans-serif;
     color: white;
     padding: .5em 0;
+    font-weight: bold;
 }
 
 #nav_menu ul li a:hover {
@@ -102,18 +103,23 @@ i {
     border-radius: 3px;
 }
 
-#hash {
+#hashButton {
     color: white;
     font-weight: bold;
+    font-size: 100%;
     border: 2px solid #6081FF;
+    height: 50px;
     width: 150px;
     padding: .1em;
     border-radius: 10px;
     background-color: #6081FF;
     margin-top: 1.5em;
+    cursor: pointer;
+    display: block;
+    margin: 1.5em auto 0 auto;
 }
 
-#hash:hover {
+#hashButton:hover {
     color: black !important;
     cursor: pointer;
 }
@@ -122,16 +128,17 @@ i {
     display: none;
 }
 
-#password, form h1 {
+#password, main h1 {
     display: block;
     margin: 0 auto;
     text-align: center;
     font-family: "Montserrat", sans-serif;
 }
 
-form h1 {
+main > h1 {
     margin-top: 2em;
     font-weight: bolder;
+    font-size: 250%;
 }
 
 #password {
@@ -156,6 +163,7 @@ aside {
     width: 45%;
     float: left;
     text-align: center;
+    margin-bottom: 5em;
 }
 
 section {
@@ -164,14 +172,11 @@ section {
     width: 45%;
     float: left;
     text-align: center;
+    margin-bottom: 5em;
 }
 
-.passP {
-     margin-bottom: 10em;
-}
-
-@media only screen and (max-width: 1636px) {
-    
+#hashedPassword, #plainPassword {
+    margin-bottom: 10em;
 }
 
 @media only screen and (max-width: 1245px) {
@@ -221,7 +226,7 @@ section {
         margin: 0;
     }
     
-    .passP {
+    #hashedPassword, #plainPassword {
         padding: 2em;
         margin: 0;
     }

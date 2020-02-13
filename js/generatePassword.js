@@ -30,9 +30,7 @@ function mediumPassword() {
         result += Math.floor(Math.random() * 10);
     }
     
-    for(var i=0; i < 2; i++) {
-        result += validChars[Math.floor(Math.random() * 4)];
-    }
+    result += validChars[Math.floor(Math.random() * 4)];
     
     document.getElementById("password").value = result;
 }

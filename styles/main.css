@@ -173,6 +173,7 @@ p {
 #yourHashedPassword {
     font-size: 150%;
     font-weight: bolder;
+    margin-bottom: 1em;
 }
 
 #hashedPassword {

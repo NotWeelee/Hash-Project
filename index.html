@@ -13,10 +13,12 @@
           src="http://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossorigin="anonymous"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/p5.js"></script>
         <script src="js/hash.js"></script>
         <script src="js/generatePassword.js"></script>
-        <script src="js/forge-sha256.min.js"></script>
+        <script src="js/hashes.js"></script>
+        <script src="js/whirlpool.js"></script>
         <script src="js/jquery.slicknav.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -39,8 +41,8 @@
                     <ul id="algMenu">
                         <li id="md5"><a href="#" onClick="updateSHA256()">SHA-256</a></li>
                         <li id="sha1"><a href="#" onClick="updateMD5()">MD5</a></li>
-                        <li id="sha2"><a href="#" onClick="updateRIPEMD()">RIPEMD</a></li>
-                        <li id="sha3"><a href="#" onClick="updateBLAKE2()">BLAKE2</a></li>
+                        <li id="sha2"><a href="#" onClick="updateRIPEMD()">RIPEMD-160</a></li>
+                        <li id="sha3"><a href="#" onClick="updateWHIRLPOOL()">WHIRLPOOL</a></li>
                     </ul>
                 </li>
                 <li id="generate">
@@ -60,7 +62,7 @@
             <i class="up"></i>
             <h1 id="enterPass">Enter a Password!</h1>
             <input type="text" name="password" id="password" minlength="8" maxlength="35"  placeholder="INPUT 8 TO 35 CHARACTERS">
-            <button type="button" id="hashButton" class="blinking" onClick="hashIt()">CHOOSE AN ALGORITHM!</button>
+            <button type="button" id="hashButton" class="blink" onClick="hashIt()">CHOOSE AN ALGORITHM!</button>
             
             <p id="yourPassword">YOUR PASSWORD:</p>
             <p id="plainPassword"></p>
@@ -68,7 +70,8 @@
             <p id="yourHashedPassword">HASHED PASSWORD:</p>
             <p id="hashedPassword"></p>
 
-            <p id="passwordInfo"></p>
+            <p id="bruteAttackInfo"></p>
+            
         </main>
         <footer>
         </footer>

@@ -271,14 +271,4 @@
     return str;
   };
 
-
-  // Export if in NodeJS environment
-
-  if (exports) {
-    exports.hash = hash;
-    exports.init = WP.init;
-    exports.add = WP.add;
-    exports.finalize = WP.finalize;
-  }
-
 })();

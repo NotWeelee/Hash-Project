@@ -176,6 +176,12 @@ p {
     margin-bottom: 1em;
 }
 
+#bruteAttackInfo {
+    font-size: 150%;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
 #hashedPassword {
     margin-top: 1em;
     margin-bottom: 4em;
